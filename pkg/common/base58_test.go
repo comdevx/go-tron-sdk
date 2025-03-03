@@ -3,7 +3,7 @@ package common_test
 import (
 	"testing"
 
-	"github.com/fbsobreira/gotron-sdk/pkg/common"
+	"github.com/comdevx/go-tron-sdk/pkg/common"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -7,16 +7,16 @@ import (
 	"os"
 
 	"github.com/btcsuite/btcd/btcec/v2"
+	"github.com/comdevx/go-tron-sdk/pkg/account"
+	"github.com/comdevx/go-tron-sdk/pkg/address"
+	"github.com/comdevx/go-tron-sdk/pkg/common"
+	c "github.com/comdevx/go-tron-sdk/pkg/common"
 	"github.com/fatih/color"
-	"github.com/fbsobreira/gotron-sdk/pkg/account"
-	"github.com/fbsobreira/gotron-sdk/pkg/address"
-	"github.com/fbsobreira/gotron-sdk/pkg/common"
-	c "github.com/fbsobreira/gotron-sdk/pkg/common"
 	"golang.org/x/crypto/ssh/terminal"
 
-	"github.com/fbsobreira/gotron-sdk/pkg/ledger"
-	"github.com/fbsobreira/gotron-sdk/pkg/mnemonic"
-	"github.com/fbsobreira/gotron-sdk/pkg/store"
+	"github.com/comdevx/go-tron-sdk/pkg/ledger"
+	"github.com/comdevx/go-tron-sdk/pkg/mnemonic"
+	"github.com/comdevx/go-tron-sdk/pkg/store"
 	"github.com/spf13/cobra"
 	"github.com/tyler-smith/go-bip39"
 )

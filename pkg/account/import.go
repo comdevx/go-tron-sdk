@@ -12,11 +12,11 @@ import (
 	"github.com/mitchellh/go-homedir"
 
 	"github.com/btcsuite/btcd/btcec/v2"
+	"github.com/comdevx/go-tron-sdk/pkg/common"
+	"github.com/comdevx/go-tron-sdk/pkg/keystore"
+	"github.com/comdevx/go-tron-sdk/pkg/mnemonic"
+	"github.com/comdevx/go-tron-sdk/pkg/store"
 	mapset "github.com/deckarep/golang-set"
-	"github.com/fbsobreira/gotron-sdk/pkg/common"
-	"github.com/fbsobreira/gotron-sdk/pkg/keystore"
-	"github.com/fbsobreira/gotron-sdk/pkg/mnemonic"
-	"github.com/fbsobreira/gotron-sdk/pkg/store"
 )
 
 // ImportFromPrivateKey allows import of an ECDSA private key
