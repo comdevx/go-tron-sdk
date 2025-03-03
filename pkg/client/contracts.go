@@ -179,7 +179,9 @@ func (g *GrpcClient) triggerContract(ct *core.TriggerSmartContract, feeLimit int
 	if feeLimit > 0 {
 		tx.Transaction.RawData.FeeLimit = feeLimit
 		// update hash
-		g.UpdateHash(tx)
+		if err := g.UpdateHash(tx); err != nil {
+			return nil, err
+		}
 	}
 	return tx, err
 }
@@ -290,7 +292,9 @@ func (g *GrpcClient) DeployContract(from, contractName string,
 	if feeLimit > 0 {
 		tx.Transaction.RawData.FeeLimit = feeLimit
 		// update hash
-		g.UpdateHash(tx)
+		if err := g.UpdateHash(tx); err != nil {
+			return nil, err
+		}
 	}
 	return tx, err
 }

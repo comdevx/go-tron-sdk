@@ -9,6 +9,7 @@ import (
 	"github.com/comdevx/go-tron-sdk/pkg/proto/core"
 	"github.com/stretchr/testify/require"
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/credentials/insecure"
 )
 
 var (
@@ -23,7 +24,7 @@ var (
 
 func TestMain(m *testing.M) {
 	opts := make([]grpc.DialOption, 0)
-	opts = append(opts, grpc.WithInsecure())
+	opts = append(opts, grpc.WithTransportCredentials(insecure.NewCredentials()))
 
 	conn = client.NewGrpcClient(tronAddress)
 

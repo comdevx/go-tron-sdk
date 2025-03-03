@@ -351,7 +351,7 @@ func makePermission(name string, pType core.Permission_PermissionType, id int32,
 		})
 	}
 	var bigOP *big.Int
-	if operations != nil && len(operations) > 0 {
+	if len(operations) > 0 {
 		bigOP = big.NewInt(0)
 		for k, o := range operations {
 			if o {
@@ -446,9 +446,6 @@ func (g *GrpcClient) UpdateAccountPermission(from string, owner, witness map[str
 			nil,
 			witness["keys"].(map[string]int64),
 		)
-		if err != nil {
-			return nil, err
-		}
 		if err != nil {
 			return nil, err
 		}
